@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   delete '/logout' => 'sessions#destroy'
   resources :users
-  resources :sccount_activations, only: [:edit]
+  resources :account_activations, only: [:edit]
+  resources :microposts, only: [:create, :destroy]
 end
